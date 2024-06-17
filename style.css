@@ -6,7 +6,7 @@
 	padding: 0;
 }
 body {
-	background-color:hsl(208, 100%, 97%);
+	background-color:hsl(208, 100%, 94%);
 }
 
 .navbar {
@@ -17,7 +17,7 @@ body {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-	background-color: rgba(90, 84, 84, 0.995);
+	background-color:hsl(208, 100%, 70%, 1.0);
 	height: 65px;
 }
 
