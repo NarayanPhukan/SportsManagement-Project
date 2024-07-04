@@ -12,100 +12,62 @@
     <link rel="icon" type="image/x-icon" href="volleyball-solid.svg" />
   </head>
   <body>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html" target="_blank" class="contents">Home</a></li>
-        <li><a href="image.html" target="_blank" class="contents">Image</a></li>
-        <li>
-          <a href="information.html" target="_blank" class="contents"
-            >Information</a
-          >
-        </li>
-        <li><a href="form.html" target="_blank" class="contents">Form</a></li>
-        <li>
-          <a href="feedback.html" target="_blank" class="contents">Feedback</a>
-        </li>
-        <li>
-          <a href="play-ground.html" target="_blank" class="contents"
-            >Play-Ground</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <div class="main">
-    	<h1>Application Form</h1>
-      <div class="application">
-        
-        <form>
-        	<h4>Personal Information</h4><br>
-          <label>First Name : </label><br>
-          <input type="text" id="name" name="name" placeholder="Enter First Name" required /><br><br>
-
-          <label>Middle Name : </label><br />
-          <input type="text" id="name" placeholder="Enter Middle Name" name="name" /><br /><br />
-
-          <label>Last Name : </label><br />
-          <input type="text" placeholder="Enter Last Name" id="name" name="name" required /><br /><br />
-
-          <label>Mobile Number : </label><br />
-          <input type="tel" id="name" name="number" maxlength="10" placeholder="Enter Mobile Number" required /><br /><br />
-
-          <label>E-Mail : </label><br>
-          <input type="email" name="email" id="name" placeholder="Enter E-Mail" required><br><br>
-
-          <label>Date of Birth : </label><br>
-          <input type="date" id="dob" name="Dob" required><br><br>
-
-          <label>Address : </label><br>
-          <input type="address" name="address" id="name" required placeholder="Enter Address"><br><br>
-
-          <h4>Emergency Contact Information</h4><br>
-
-          <label>Name of Emergency Contact : </label><br>
-          <input type="text" name="name" id="name" required placeholder="Enter Name"><br><br>
-
-          <label>Relation to Applicant : </label><br>
-          <input type="text" name="relation" id="name" placeholder="Enter relation to applicant" required><br><br>
-
-          <label>Emergency Contact Phone Number : </label><br>
-          <input type="tel" name="contact" id="name" placeholder="Enter Emergency Contact" required><br><br>
-
-          <h4>Sport-Specific Information</h4><br>
-
-          <label>Sport or Activity Applying : </label><br>
-          <select id="name" style="cursor: pointer;">
-          	<option>BasketBall</option>
-          	<option>Swimming</option>
-          	<option>Tennis</option>
-          	<option>Football</option>
-          	<option>Badminton</option>
-          	<option>Boxing</option>
-          	<option>Karate</option>
-          	<option>Judo</option>
-          	<option>Taekwando</option>
-          	<option>Running</option>
-          </select><br><br>
-
-          <label for="checkbox">Any Previous Experience : </label><br>
-          <label>Yes</label>
-          <input type="radio" name="checkbox" value="yes">
-          <label>No</label>
-          <input type="radio" name="checkbox" value="no"><br><br>
-
-          <h4>Medical Information</h4><br>
-
-          <label>Any Medical Conditions or Allergies : </label><br>
-          <input type="text" id="name" name="medications" placeholder="Enter Conditions or Allergies"><br><br>
-
-          <label>Medications Currently Taking : </label><br>
-          <input type="text" placeholder="Current Medications" id="name"><br><br>
-
-          <label>Physician's Contact Information : </label><br>
-          <textarea id="textarea" placeholder="Enter Physician's Contact Information.(phone number, name, etc" rows="6" cols="35"></textarea><br><br>
-
-          <button type="submit">Submit</button>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Sports Management</h1>
+            </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="" target="_blank"  class="contents">Home</a></li>
+      <li><a href="image.html" target="_blank"  class="contents">Image</a></li>
+      <li><a href="" target="_blank"  class="contents">Information</a></li>
+      <li><a href="form.html" target="_blank"  class="contents">Form</a></li>
+      <li><a href="feedback.html" target="_blank"  class="contents">Feedback</a></li>
+      <li><a href="play-ground.html" target="_blank"  class="contents">Play-Ground</a></li>
+    </ul>
+  </nav>
+   </div>
+    </header>
+    <div class="form-container">
+        <h2>Apply for Your Favorite Sport</h2>
+        <form action="/submit-application" method="POST">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="sport">Select Sport</label>
+                <select id="sport" name="sport" required>
+                    <option value="">Choose a sport</option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="baseball">Baseball</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="tennis">Tennis</option>
+                    <option value="hockey">Hockey</option>
+                    <option value="swimming">Swimming</option>
+                    <option value="athletics">Athletics</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience">Years of Experience</label>
+                <input type="number" id="experience" name="experience" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Why do you want to join?</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Application</button>
         </form>
-      </div>
     </div>
   </body>
 </html>
